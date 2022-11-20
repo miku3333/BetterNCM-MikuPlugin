@@ -1,4 +1,5 @@
 import { defineConfig } from '@umijs/max';
+const { LessPluginRemoveAntdGlobalStyles } = require('less-plugin-remove-antd-global-styles');
 import routes from './routes';
 
 export default defineConfig({
@@ -11,6 +12,13 @@ export default defineConfig({
     },
     qiankun: {
         slave: {}
+    },
+    lessLoader: {
+        modifyVars: {
+            '@ant-prefix': 'miku-plugin'
+        },
+        plugins: [new LessPluginRemoveAntdGlobalStyles()],
+        javascriptEnabled: true
     },
     routes,
     npmClient: 'pnpm',
