@@ -15,7 +15,7 @@ const btnClick = () => {
 
 // 创建root并隐藏
 const reactRoot = document.querySelector('#miku-plugin-root') || document.createElement('div');
-reactRoot.id = 'root';
+reactRoot.id = 'miku-plugin-root';
 const root = document.querySelector('.g-mn').appendChild(reactRoot);
 root.style.display = 'none';
 
