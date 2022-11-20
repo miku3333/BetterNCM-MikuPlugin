@@ -1,4 +1,3 @@
-import { ICON_JS } from './constants';
 import './style/index.less';
 
 export const layout = () => {
@@ -10,7 +9,14 @@ export const layout = () => {
     };
 };
 
-const script = document.createElement('script');
-script.setAttribute('type', 'text/javascript');
-script.setAttribute('src', ICON_JS);
-document.getElementsByTagName('head')[0].appendChild(script);
+// export function render(oldRender: any) {
+//     const reactRoot = document.querySelector('#miku-plugin-root') || document.createElement('div');
+//     reactRoot.id = 'miku-plugin-root';
+//     document.body.appendChild(reactRoot);
+//     // @ts-ignore
+//     // console.log(root);
+//     console.log('umi render start');
+//     console.log(oldRender);
+//     console.log(oldRender());
+//     console.log('umi render end');
+// }

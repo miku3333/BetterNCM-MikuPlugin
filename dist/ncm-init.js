@@ -13,12 +13,6 @@ const btnClick = () => {
     display = !display;
 };
 
-// 创建root并隐藏
-const reactRoot = document.querySelector('#miku-plugin-root') || document.createElement('div');
-reactRoot.id = 'miku-plugin-root';
-const root = document.querySelector('.g-mn').appendChild(reactRoot);
-root.style.display = 'none';
-
 // 侧边栏添加插件管理菜单
 const sys = document.querySelector('.sys');
 const btn = sys.appendChild(document.createElement('li'));

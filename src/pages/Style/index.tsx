@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { SketchPicker, ColorResult } from 'react-color';
 import { BgColorsOutlined } from '@ant-design/icons';
 import styles from './style.module.less';
-import { IS_DEV, PERFIX } from '@/constants';
+import { IS_IN_NCM, PERFIX } from '@/constants';
 import { useModel } from '@umijs/max';
 const { Item } = Form;
 
@@ -70,7 +70,7 @@ const Style = () => {
         }, 500);
     }, []);
     useEffect(() => {
-        !IS_DEV && updateFonts();
+        IS_IN_NCM && updateFonts();
     }, []);
 
     const [pickerVisable, setPickerVisable] = useState(false);
