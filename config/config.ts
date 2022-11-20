@@ -4,6 +4,7 @@ import routes from './routes';
 export default defineConfig({
     antd: {},
     base: '/miku-plugin/',
+    publicPath: '/miku-plugin/',
     model: {},
     layout: {
         title: 'miku-plugin'
