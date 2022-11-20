@@ -1,0 +1,15 @@
+{
+  "manifest_version": 1,
+  "name": "miku-plugin",
+  "version": "0.1.0",
+  "injects": {
+    "Main": [
+      {
+        "file": "ncm-init.js"
+      },
+      {
+        "file": "umi.js"
+      }
+    ]
+  }
+}
