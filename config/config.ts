@@ -14,6 +14,5 @@ export default defineConfig({
     },
     routes,
     npmClient: 'pnpm',
-    mountElementId: 'miku-plugin-root',
     extraBabelPlugins: process.env.NODE_ENV === 'production' ? ['babel-plugin-dynamic-import-node'] : []
 });
