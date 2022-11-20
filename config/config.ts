@@ -9,6 +9,9 @@ export default defineConfig({
     layout: {
         title: 'miku-plugin'
     },
+    qiankun: {
+        slave: {}
+    },
     routes,
     npmClient: 'pnpm',
     mountElementId: 'miku-plugin-root',
