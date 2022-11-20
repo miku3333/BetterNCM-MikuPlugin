@@ -3,6 +3,7 @@ import routes from './routes';
 
 export default defineConfig({
     antd: {},
+    base: '/miku-plugin/',
     model: {},
     layout: {
         title: 'miku-plugin'
