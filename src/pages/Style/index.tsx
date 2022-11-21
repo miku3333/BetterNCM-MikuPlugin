@@ -3,22 +3,10 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { SketchPicker, ColorResult } from 'react-color';
 import { BgColorsOutlined } from '@ant-design/icons';
 import styles from './style.module.less';
-import { IS_IN_NCM, PERFIX } from '@/constants';
+import { IS_IN_NCM, PERFIX, STYLE_CONFIG } from '@/constants';
 import { useModel } from '@umijs/max';
 const { Item } = Form;
 
-const STYLE_CONFIG = [
-    {
-        label: '字体',
-        name: 'font-family',
-        placeholder: '字体的中文名或英文名(可在word中查看)'
-    },
-    {
-        label: '字体颜色',
-        name: 'color',
-        placeholder: '16进制#39c5bb[cc](中括号内为透明度, 可选)或rgb(57, 197, 187)或rgba(57, 197, 187, 0.8)'
-    }
-];
 const initialValues = STYLE_CONFIG.reduce((pre: { [key: string]: any }, { name }) => {
     pre[name] = localStorage.getItem(`${PERFIX}-${name}`) || '';
     return pre;
@@ -37,10 +25,6 @@ const Style = () => {
         let style = '';
         if (init.current) {
             init.current = false;
-            STYLE_CONFIG.forEach(({ name }) => {
-                const value = localStorage.getItem(`${PERFIX}-${name}`);
-                style += `${name}: ${value} !important;`;
-            });
         } else {
             Object.keys(formValue).forEach(name => {
                 const value = formValue[name as keyof typeof formValue];
