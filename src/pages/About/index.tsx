@@ -5,7 +5,7 @@ import styles from './style.module.less';
 const About = () => {
     return (
         <div className={styles.about}>
-            <a target='_blank' href='https://github.com/miku3333/ncm-plugin' className={styles.github} rel='noreferrer'>
+            <a target='_blank' href='https://github.com/miku3333/BetterNCM-MikuPlugin' className={styles.github} rel='noreferrer'>
                 <GithubOutlined />
                 @miku3333有想要的功能欢迎来提Issue, 顺便点个star
             </a>
