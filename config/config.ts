@@ -1,10 +1,10 @@
 import { defineConfig } from '@umijs/max';
 import routes from './routes';
-
+const IS_DEV = false;
 export default defineConfig({
     antd: {},
-    base: '/miku-plugin/',
-    publicPath: '/miku-plugin/',
+    base: IS_DEV ? '/' : '/miku-plugin/',
+    publicPath: IS_DEV ? '/' : '/miku-plugin/',
     model: {},
     layout: {
         title: 'miku-plugin'

@@ -20,5 +20,9 @@ export default [
         path: '/about',
         icon: 'GithubOutlined',
         component: './About'
+    },
+    {
+        path: '*',
+        redirect: '/Block'
     }
 ];
