@@ -31,9 +31,9 @@ const Style = () => {
                 localStorage.setItem(`${PERFIX}-${name}`, value);
                 style += `${name}: ${value} !important;`;
             });
-        }
-        if (styleDom.current) {
-            styleDom.current.innerHTML = `*{${style}}`;
+            if (styleDom.current) {
+                styleDom.current.innerHTML = `*{${style}}`;
+            }
         }
     }, [formValue]);
 
